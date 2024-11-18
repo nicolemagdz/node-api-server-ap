@@ -1,6 +1,13 @@
 const http = require('http');
 const url = require('url');
+const cors = require('cors');
 const dt = require('./datetime');
+
+function enableCors(request, response) {
+    response.setHeader('Access-Control-Allow-Origin', '*');
+    response.setHeader('Access-Control-Allow-Methods', 'GET,POST');
+    response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+}
 
 // Create a server
 const server = http.createServer((request, response) => {
