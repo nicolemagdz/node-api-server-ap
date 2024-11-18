@@ -9,7 +9,7 @@ const server = http.createServer((request, response) => {
 
     // Standard Hello World.
     response.writeHead(200, {'Content-Type': 'text/html'});
-    response.write('<h3>Hello World!</h3>')
+    response.write('<h3>Hello World! --MERNa IaC Server Node.js API on Azure Portal</h3>')
 
     // Access funcion from a separate JavaScript module.
     response.write("The date and time are currently: " + dt.myDateTime() + "<br><br>");
@@ -24,7 +24,7 @@ const server = http.createServer((request, response) => {
     response.write("txt="+txt);
 
     // Close the response
-    response.end('<h3>The End.</h3>');
+    response.end('<h3>The End. V2</h3>');
 });
 
 const port = process.env.PORT || 1337;
